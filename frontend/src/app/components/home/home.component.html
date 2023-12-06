@@ -1,0 +1,349 @@
+<!-- Home Component -->
+<body class="bg-gray-200">
+<div class="container mx-auto  w-screen">
+
+    <!-- Navbar (To be implemented as a separate component) -->
+    <div class="mb-8">
+      <!-- Navbar content goes here -->
+      <app-navbar></app-navbar>
+    </div>
+  
+    <!-- Three Sections -->
+    <div class="flex space-x-8">
+  
+      <!-- Left Section -->
+      <div class="w-1/4 " >
+        <!-- Left Section content goes here -->
+        <!-- Upper Card with Profile Info -->
+            <div class="bg-white p-4 rounded-md mb-4 text-center">
+                <!-- Profile Image -->
+                <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-full h-44  mx-auto mb-2 rounded-md">
+
+                <!-- User Info -->
+                <p class="font-bold text-xl">Eric Kyalo</p>
+                <p class="text-gray-500 mb-4">@Erickyalo_</p>
+
+                <!-- Three Numbers in One Row -->
+                <div class="flex justify-between mb-2">
+                <div>
+                    <p class="font-bold">200</p>
+                    <p class="text-gray-500">Posts</p>
+                </div>
+                <div>
+                    <p class="font-bold">2023</p>
+                    <p class="text-gray-500">Followers</p>
+                </div>
+                <div>
+                    <p class="font-bold">500</p>
+                    <p class="text-gray-500">Following</p>
+                </div>
+                </div>
+
+                <!-- My Profile Button -->
+                <button class="bg-purple-500 text-white w-full  rounded-full p-2">My Profile</button>
+            </div>
+
+
+         <!-- lower Card -->
+         <div class="bg-white p-4 rounded-md mb-4">
+            <div class="flex items-center justify-between">
+              <span>Your shortcuts</span>
+              <span>See all</span>
+            </div>
+    
+          <!-- Circular Images with Text -->
+          <div class="flex flex-col space-y-2 mt-4">
+            <!-- Example Circular Image with Text (You can duplicate this for more shortcuts) -->
+            <div class="flex items-center">
+              <img src="/assets/images/profile-image.jpg" alt="Shortcut Image" class="w-8 h-8 rounded-full mr-2 mb-4">
+              <span>Art and Drawing</span>
+            </div>
+
+            <div class="flex items-center">
+                <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2 mb-4">
+                <span>John Doe</span>
+            </div>
+
+
+            <div class="flex items-center ">
+                <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2 mb-4">
+                <span>John Doe</span>
+            </div>
+
+            <div class="flex items-center ">
+                <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2 mb-4">
+                <span>John Doe</span>
+            </div>
+  
+    
+            <!-- Add more circular images with text here -->
+           </div>
+
+          </div>
+      </div>
+  
+      <!-- Middle Section -->
+      <div class="w-1/2 ">
+        <!-- Middle Section content goes here -->
+  
+        <!-- Post Card for Posting -->
+       <!-- Post Card for Posting -->
+        <div class="bg-white p-4 rounded-md mb-4">
+            <div class="flex items-center mb-4">
+            <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2">
+            <input type="text" placeholder="Share something..." class="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none">
+            </div>
+            <div class="flex items-center justify-between space-x-4">
+            <div>
+                <i class=" ml-10 fas fa-image"></i>
+                <span>Image</span>
+            </div>
+            <div>
+                <i class="fas fa-video"></i>
+                <span>Video</span>
+            </div>
+            <div>
+                <i class="fas fa-poll"></i>
+                <span>Poll</span>
+            </div>
+            <div>
+                <i class="fas fa-at"></i>
+                <span>public</span>
+            </div>
+            <button class="bg-purple-500 text-white rounded-full  py-1 px-4">Post</button>
+            </div>
+        </div>
+  
+  
+        <!-- Dropdown for Sorting Posts -->
+        <div class="mb-4 flex">
+            <!-- Move select to the right using ml-auto -->
+            <select class="p-2 border rounded ml-auto">
+              <option>Sort by Recent</option>
+              <option>Sort by Older</option>
+            </select>
+        </div>
+          
+  
+        <!-- Post Cards -->
+        <!-- Example Post Card (You can duplicate this for more posts) -->
+        <div class="bg-white p-4 rounded-md mb-4">
+          <!-- Profile Pic and User Info -->
+          <div class="flex items-center mb-2">
+            <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2">
+            <div>
+              <p class="font-bold">Eric Kyalo</p>
+              <p class="text-gray-500">12 minutes ago</p>
+            </div>
+          </div>
+  
+          <!-- Post Content -->
+            <div class="flex items-center space-x-4 mb-2">
+                <h2 class="text-xl font-bold">The Arsenal</h2>
+                <p class="text-blue-700">#epl</p>
+                <p class="text-blue-700">#gunners</p>
+                <p class="text-blue-700">#ucl</p>
+                <p class="text-blue-700">#wenger</p>
+            </div>
+            
+
+
+
+  
+          <!-- Image Post -->
+          <img src="/assets/images/profile-image.jpg" alt="Post Image" class="w-full h-58 rounded-md object-cover mb-2">
+  
+          <!-- Post Actions (Like, Comment, Save, Share) -->
+          <div class="flex items-center space-x-4">
+            <div>
+              <i class="fas fa-heart mr-1"></i>
+              <span>320k</span>
+            </div>
+            <div>
+              <i class="fas fa-comment mr-1"></i>
+              <span>300k</span>
+            </div>
+            <div>
+              <i class="fas fa-save mr-1"></i>
+              <span>Save</span>
+            </div>
+            <div class="flex-1"></div> <!-- Empty space to push the following content to the right -->
+                <div class="flex items-center group">
+                <i class="fas fa-paper-plane text-purple-500 cursor-pointer transition duration-300 transform group-hover:translate-x-2"></i>
+                <span class="opacity-0 group-hover:opacity-100 transition duration-300">Share</span>
+              </div>         
+            </div>
+  
+          <!-- Comment Input Area -->
+          <div class="mt-2">
+            <input type="text" placeholder="Write your comment..." class="w-full p-2 border rounded focus:outline-none">
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-md mb-4">
+            <!-- Profile Pic and User Info -->
+            <div class="flex items-center mb-2">
+              <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2">
+              <div>
+                <p class="font-bold">Eric Kyalo</p>
+                <p class="text-gray-500">12 minutes ago</p>
+              </div>
+            </div>
+    
+            <!-- Post Content -->
+              <div class="flex items-center space-x-4 mb-2">
+                  <h2 class="text-xl font-bold">The Arsenal</h2>
+                  <p class="text-blue-700">#epl</p>
+                  <p class="text-blue-700">#gunners</p>
+                  <p class="text-blue-700">#ucl</p>
+                  <p class="text-blue-700">#wenger</p>
+              </div>
+              
+  
+  
+  
+    
+            <!-- Image Post -->
+            <img src="/assets/images/profile-image.jpg" alt="Post Image" class="w-full h-58 rounded-md object-cover mb-2">
+    
+            <!-- Post Actions (Like, Comment, Save, Share) -->
+            <div class="flex items-center space-x-4">
+              <div>
+                <i class="fas fa-heart"></i>
+                <span>320k</span>
+              </div>
+              <div>
+                <i class="fas fa-comment"></i>
+                <span>300k</span>
+              </div>
+              <div>
+                <i class="fas fa-save"></i>
+                <span>Save</span>
+              </div>
+              <div class="flex-1"></div> <!-- Empty space to push the following content to the right -->
+              <div class="flex items-center group">
+              <i class="fas fa-paper-plane text-purple-500 cursor-pointer transition duration-300 transform group-hover:translate-x-2"></i>
+              <span class="opacity-0 group-hover:opacity-100 transition duration-300">Share</span>
+            </div>         
+          </div>           
+    
+            <!-- Comment Input Area -->
+            <div class="mt-2">
+              <input type="text" placeholder="Write your comment..." class="w-full p-2 border rounded focus:outline-none">
+            </div>
+          </div>
+  
+        <!-- Add more post cards here -->
+  
+      </div>
+  
+      <!-- Right Section -->
+      <div class="w-1/4 ">
+        <!-- Right Section content goes here -->
+  
+       
+  
+        <!-- Lower Card -->
+        <div class="bg-white p-4 rounded-md mb-4">
+          <div class="flex items-center justify-between">
+            <span>Activity</span>
+
+            <span>See all</span>
+          </div>
+  
+          <!-- Activity Icons with Text (You can add more) -->
+          <div class="flex flex-col space-y-2 mt-4">
+            <div class="flex items-center">
+              <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2">
+              <div class="flex">
+                <p class="text-gray-600">Dana Started <br>following you <span class="text-gray-500">5m ago</span></p>
+              </div>
+            </div>
+
+
+            <div class="flex items-center">
+                <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2">
+                <div>
+                  <p class="text-gray-600">Dana liked <br>your photo <span class="text-gray-500">5m ago</span></p>
+                </div>
+            </div>
+
+
+            <div class="flex items-center">
+                <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2">
+                <div>
+                  <p class="text-gray-600">Dana commented <br>your post <span class="text-gray-500">5m ago</span></p>
+                </div>
+            </div>
+
+            <div class="flex items-center">
+                <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2">
+                <div>
+                  <p class="text-gray-600">Dana shared <br>photo <span class="text-gray-500">5m ago</span></p>
+                </div>
+            </div>
+
+
+            <div class="flex items-center">
+                <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2">
+                <div>
+                  <p class="text-gray-600">Dana Started <br>following you <span class="text-gray-500">5m ago</span></p>
+                </div>
+            </div>
+
+            <div class="flex items-center">
+                <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2">
+                <div>
+                  <p class="text-gray-600">Dana Started <br>following you <span class="text-gray-500">5m ago</span></p>
+                </div>
+            </div>
+  
+            <!-- Add more activity entries here -->
+  
+          </div>
+        </div>
+  
+        <!-- Suggestions Card -->
+        <div class="bg-white p-4 rounded-md">
+          <div class="flex items-center justify-between">
+            <span>Suggested for You</span>
+
+            <span>See all</span>
+          </div>
+  
+          <!-- Suggested Profiles with Text (You can add more) -->
+          <div class="flex flex-col space-y-2 mt-4">
+            <div class="flex items-center">
+              <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2 mb-2">
+              <span>John Doe</span>
+            </div>
+
+            <div class="flex items-center mb-8">
+                <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2 mb-2">
+                <span>John Doe</span>
+            </div>
+
+            <div class="flex items-center">
+                <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2 mb-2">
+                <span>John Doe</span>
+            </div>
+
+            <div class="flex items-center">
+                <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2 mb-2">
+                <span>John Doe</span>
+            </div>
+
+            <div class="flex items-center">
+                <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2 mb-2">
+                <span>John Doe</span>
+            </div>
+  
+            <!-- Add more suggested profiles here -->
+  
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+</body>

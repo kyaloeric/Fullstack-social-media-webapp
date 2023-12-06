@@ -1,0 +1,77 @@
+<!-- src/app/signup/signup.component.html -->
+<div class="flex justify-center h-screen p-36 bg-purple-700 ">
+    <!-- Left Section with Image and Title -->
+    <div class="w-1/2 bg-cover flex flex-col items-center justify-center bg-purple-700  ml-40 rounded-l-md">
+        <div class="  ">
+          <h1 class="text-4xl font-bold text-center text-white mb-4">Talky</h1>
+          <h2 class="text-2xl text-center text-white mb-2">Chat with many folks worldwide</h2>
+          <p class="text-yellow-500 mb-4">FOR FREE</p>
+        </div>
+      
+        <div class=" flex  justify-center overflow-hidden ml-28 ">
+          <img src="https://images.pexels.com/photos/4353618/pexels-photo-4353618.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Talky Image" class="  w-full   " />
+        </div>
+    </div>
+      
+      
+  
+    <!-- Right Section with Signup Form -->
+    <div class="w-1/2 p-8 mr-40 rounded-r-md  bg-white">
+      <h2 class="text-3xl font-bold mb-4  mr-14 ml-14 ">Sign Up</h2>
+  
+      <!-- Username Input -->
+      <div class="mb-4 mr-14 ml-14">
+        <label for="username" class="text-gray-500">User Name</label>
+        <input id="username" class="rounded-md border border-purple-500 p-2 w-full focus:outline-none" type="text" placeholder="John Doe" />
+      </div>
+  
+      <!-- Email Input -->
+      <div class="mb-4 mr-14 ml-14">
+        <label for="email" class="text-gray-500">Email</label>
+        <input id="email" class="rounded-md border border-purple-500 p-2 w-full focus:outline-none" type="text" placeholder="abc123@gmail.com" />
+      </div>
+  
+      <!-- Password Input -->
+      <div class="mb-4 mr-14 ml-14">
+        <label for="password" class="text-gray-500">Password</label>
+        <input id="password" class="rounded-md border border-purple-500 p-2 w-full focus:outline-none" type="password" placeholder="............." />
+      </div>
+  
+      <!-- Re-enter Password Input -->
+      <div class="mb-4 mr-14 ml-14">
+        <label for="rePassword" class="text-gray-500">Re-enter Password</label>
+        <input id="rePassword" class="rounded-md border border-purple-500 p-2 w-full focus:outline-none" type="password" placeholder="............." />
+      </div>
+  
+      <!-- Privacy Policy and Terms of Service Checkboxes -->
+      <div class="flex items-center mb-4 mr-14 ml-14">
+        <input type="checkbox" id="privacyPolicy" class="mr-2" />
+        <label for="privacyPolicy">Privacy policy</label>
+      </div>
+      <div class="flex items-center mb-4 mr-14 ml-14">
+        <input type="checkbox" id="termsOfService" class="mr-2" />
+        <label for="termsOfService">I've read and agreed with the Terms of Service</label>
+      </div>
+  
+      <!-- Signup Button -->
+      <div class="mr-14 ml-14">
+        <button class="bg-purple-500 text-white p-2 rounded-md w-full mb-4 ">Sign Up</button>
+
+      </div>
+  
+      <!-- OR Text -->
+      <p class="text-center mb-4">OR</p>
+  
+      <!-- Signup with Google Button -->
+      <div class="flex justify-center ">
+        <button class="bg-white text-gray-900 p-2 rounded-full w-34 mb-4 flex items-center justify-center border border-gray-900">
+            <i class="fab fa-google mr-2"></i> Signup with Google
+        </button>
+      </div>
+    
+  
+      <!-- Already have an account? Sign in -->
+      <p class="text-center text-gray-500">Already have an account? <span class=" text-blue-500">Sign in</span></p>
+    </div>
+  </div>
+  

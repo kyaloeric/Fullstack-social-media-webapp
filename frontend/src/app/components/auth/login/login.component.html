@@ -1,0 +1,50 @@
+<!-- src/app/login/login.component.html -->
+<div class="flex h-screen p-24 bg-purple-900 ">
+    <!-- Right Section with Login Form -->
+    <div class="w-1/2 p-8 flex items-center justify-center bg-gray-100 ml-36 rounded-l-md">
+      <div class="w-full max-w-md"> <!-- Added a container with max width -->
+        <h2 class="text-3xl font-bold mb-14 -mt-30">Login</h2>
+  
+        <!-- Email Input -->
+      <!-- Email Input -->
+        <div class="mb-4">
+            <div class="flex items-center">
+            <i class="fas fa-envelope text-purple-500 mr-2 mb-4"></i>
+            <span class="text-gray-900 cursor-pointer mb-4" (click)="focusEmailInput()">Enter your email</span>
+            </div>
+            <input [(ngModel)]="email" #emailInput class="border border-purple-500 rounded-md ml-2 focus:outline-none p-2 w-full mb-14" type="text" placeholder="Email" />
+        </div>
+        <!-- Password Input -->
+        <div class="mb-4">
+            <div class="flex items-center">
+            <i class="fas fa-lock text-purple-500 mr-2 mb-4"></i>
+            <span class="text-gray-900 cursor-pointer mb-4" (click)="focusPasswordInput()">Enter your password</span>
+            </div>
+            <input [(ngModel)]="password" #passwordInput class="border border-purple-500 rounded-md ml-2 focus:outline-none p-2 w-full" type="password" placeholder="Password" />
+        </div>
+  
+  
+        <div class="flex items-center mb-4 mt-14">
+          <span class="text-blue-500 cursor-pointer ">Forgot password?</span>
+        </div>
+  
+        <!-- Login Button -->
+        <button class="bg-purple-500 text-white p-2 w-full rounded-md mb-4" (click)="login()">Login</button>
+  
+        <!-- Signup Text -->
+        <div class="text-center">
+          <p>Don't have an account? <span class="text-blue-500 cursor-pointer">Signup now</span></p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Left Section with Image -->
+   <!-- Left Section with Image -->
+    <div class="w-1/2 bg-cover bg-center mr-36 rounded-r-md relative" style="background-image: url('assets/images/screen.jpg');">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+        <h1 class="text-4xl font-bold mb-4">Every new friend is a new adventure</h1>
+        <p class="text-sm">Let's get connected</p>
+        </div>
+    </div>
+</div>
+  

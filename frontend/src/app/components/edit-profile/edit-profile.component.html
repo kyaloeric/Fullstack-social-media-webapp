@@ -1,1 +1,191 @@
-<p>edit-profile works!</p>
+<div class="bg-gray-200">
+    <!-- Edit Profile Component -->
+    
+<div class="flex h-screen p-2">
+
+   <!-- Side Navbar -->
+   <div class="flex flex-col items-center space-y-4 w-1/4 bg-purple-500 rounded-md">
+    <!-- Cog Icon -->
+    <i class="fas fa-cog text-white text-4xl mb-4 mt-12"></i>
+  
+    <!-- Navigation Items -->
+    <div class="flex flex-col items-start space-y-4">
+      <div class="flex items-center justify-center space-x-2 ">
+        <i class="mt-8 fas fa-home text-white text-2xl"></i>
+        <span class="mt-8 text-white">Home</span>
+      </div>
+      <div class="flex items-center justify-center space-x-2 ">
+        <i class=" mt-8 fas fa-user text-white text-2xl"></i>
+        <span class="mt-8 text-white">Profile</span>
+      </div>
+      <div class="flex items-center justify-center  space-x-2 ">
+        <i class="mt-8 fas fa-bookmark text-white text-2xl"></i>
+        <span class="mt-8 text-white it">Bookmarks</span>
+      </div>
+      <div class="flex items-center justify-center space-x-2  ">
+        <i class="mt-8 fas fa-cog text-white text-2xl"></i>
+        <span class="mt-8 text-white">Settings</span>
+      </div>
+
+      <div>
+        <button class=" mt-8 bg-purple-900 text-white rounded px-8 py-2">Logout</button>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+  
+  
+    
+    
+    <!-- Main Content -->
+    <div class="flex-1 mb-0   mt-0 ml-2 rounded-md">
+  
+      <!-- Top Navbar -->
+      <div class="flex items-center justify-between mb-2 bg-white p-4 rounded-md">
+        <span class="text-lg font-bold">My Profile</span>
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-bell"></i>
+          <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full">
+
+          <!-- HTML Structure -->
+            <div class="dropdown">
+                <!-- Dropdown Trigger (Arrow) -->
+                <div class="relative inline-block text-left">
+                <button (click)="toggleDropdown()" type="button" class="focus:outline-none">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <!-- Dropdown Content -->
+                <div *ngIf="isDropdownVisible" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                    <div class="py-1" role="menuitem">
+                    <button class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100">Discard</button>
+                    </div>
+                    <div class="py-1" role="menuitem">
+                    <button class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100">Logout</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+  
+
+          
+          
+          
+          
+          
+         
+        </div>
+      </div>
+  
+      <!-- Main Sections (Left and Right) -->
+      <div class="flex space-x-1">
+  
+        <!-- Left Section -->
+       
+        <div class="flex flex-col space-y-4 w-1/4 bg-white rounded-md">
+            <div class="flex items-center space-x-2 ml-4 mt-4">
+              <i class="fas fa-edit text-gray-500"></i>
+              <span class="text-gray-500">Edit Profile</span>
+              <i class="fas fa-chevron-right text-gray-500"></i>
+            </div>
+            
+            <!-- Notifications Section -->
+            <div class="flex items-center space-x-2 ml-4">
+              <i class="fas fa-bell text-gray-500"></i>
+              <span class="text-gray-500">Notifications</span>
+              <i class="fas fa-chevron-right text-gray-500"></i>
+            </div>
+          
+            <!-- Choose Plan Section -->
+            <div class="flex items-center space-x-2 ml-4">
+              <i class="fas fa-money text-gray-500"></i>
+              <span class="text-gray-500">Choose Plan</span>
+              <i class="fas fa-chevron-right text-gray-500"></i>
+            </div>
+          
+            <!-- Password & Security Section -->
+            <div class="flex items-center space-x-2 ml-4">
+              <i class="fas fa-lock text-gray-500"></i>
+              <span class="text-gray-500">Password & Security</span>
+              <i class="fas fa-chevron-right text-gray-500"></i>
+            </div>
+            <!-- ... Other sections ... -->
+          </div>
+          
+  
+        <!-- Right Section -->
+        <div class="flex-1 bg-white p-20 rounded-md">
+          <div class="text-2xl font-bold mb-8 ml-4 mt-4">Edit Profile</div>
+          <div class="flex items-center ml-48 mt-4 mb-4">
+            <div class="relative rounded-full overflow-hidden w-24 h-24">
+              <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-full h-full object-cover">
+              <div class="absolute inset-0 flex items-center justify-center bg-blue-500 bg-opacity-75 transition duration-300 hover:bg-opacity-100">
+                <i class="fas fa-pen text-white"></i>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Edit Profile Form -->
+          <!-- Edit Profile Form -->
+            <form class="mr-auto max-w-xl ml-4 bg-white">
+                <!-- Name -->
+                <div class="mb-4">
+                <label for="name" class="text-gray-800 block">Name</label>
+                <input type="text" id="name" placeholder="Rics" class="border rounded-md p-2 w-full focus:outline-none">
+                </div>
+            
+                <!-- Email -->
+                <div class="mb-4">
+                <label for="email" class="text-gray-800 block">Email</label>
+                <input type="email" id="email" placeholder="abc123@gmail.com" class="border rounded-md p-2 w-full focus:outline-none">
+                </div>
+            
+                <!-- Contact Number -->
+                <div class="mb-4">
+                <label for="contactNumber" class="text-gray-800 block">Contact Number</label>
+                <input type="tel" id="contactNumber" placeholder="0778770447" class="border rounded-md p-2 w-full focus:outline-none">
+                </div>
+            
+                <!-- Address -->
+                <div class="mb-4">
+                <label for="address" class="text-gray-800 block">Address</label>
+                <input type="text" id="address" placeholder="72 Hospital Road" class="border rounded-md p-2 w-full focus:outline-none">
+                </div>
+            
+                <!-- City and Country -->
+                <div class="flex mb-4">
+                <div class="flex-1 mr-2">
+                    <label for="city" class="text-gray-800 block">City</label>
+                    <input type="text" id="city" placeholder="City" class="border rounded-md p-2 w-full focus:outline-none">
+                </div>
+                <div class="flex-1 ml-2">
+                    <label for="country" class="text-gray-800 block">Country</label>
+                    <input type="text" id="country" placeholder="Country" class="border rounded-md p-2 w-full focus:outline-none">
+                </div>
+                </div>
+            
+                <!-- Password -->
+                <div class="mb-4">
+                <label for="password" class="text-gray-800 block">Password</label>
+                <input type="password" id="password" placeholder="***************" class="border rounded-md p-2 w-full focus:outline-none">
+                </div>
+            
+                <!-- Buttons -->
+                <div class="flex items-center justify-center space-x-4 mt-4">
+                <button class="bg-purple-500 text-white rounded px-11 py-2">Save</button>
+                <button class="bg-gray-500 text-white rounded px-8 py-2">Discard</button>
+                </div>
+            </form>
+  
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+</div>
+

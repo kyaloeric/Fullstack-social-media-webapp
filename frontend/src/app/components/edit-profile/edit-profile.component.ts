@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./edit-profile.component.css']
 })
 export class EditProfileComponent {
+  isDropdownVisible: boolean = false;
+
+  toggleDropdown() {
+    this.isDropdownVisible = !this.isDropdownVisible;
+  }
 
 }

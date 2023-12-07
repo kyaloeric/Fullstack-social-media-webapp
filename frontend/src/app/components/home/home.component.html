@@ -1,18 +1,18 @@
 <!-- Home Component -->
 <body class="bg-gray-200">
+  <div class="mb-8">
+    <!-- Navbar content goes here -->
+    <app-navbar class="fixed top-0 w-full z-50 "></app-navbar>
+  </div>
 <div class="container mx-auto  w-screen">
 
     <!-- Navbar (To be implemented as a separate component) -->
-    <div class="mb-8">
-      <!-- Navbar content goes here -->
-      <app-navbar></app-navbar>
-    </div>
-  
+    
     <!-- Three Sections -->
     <div class="flex space-x-8">
   
       <!-- Left Section -->
-      <div class="w-1/4 " >
+      <div class="w-1/4 fixed left-30 top-24 h-screen overflow-y-auto" >
         <!-- Left Section content goes here -->
         <!-- Upper Card with Profile Info -->
             <div class="bg-white p-4 rounded-md mb-4 text-center">
@@ -83,10 +83,9 @@
       </div>
   
       <!-- Middle Section -->
-      <div class="w-1/2 ">
-        <!-- Middle Section content goes here -->
+      <div class="w-1/2 mx-auto overflow-y-auto top-24">
+        <!-- Middle Section content -->
   
-        <!-- Post Card for Posting -->
        <!-- Post Card for Posting -->
         <div class="bg-white p-4 rounded-md mb-4">
             <div class="flex items-center mb-4">
@@ -126,7 +125,7 @@
           
   
         <!-- Post Cards -->
-        <!-- Example Post Card (You can duplicate this for more posts) -->
+        <!--  Post Card -->
         <div class="bg-white p-4 rounded-md mb-4">
           <!-- Profile Pic and User Info -->
           <div class="flex items-center mb-2">
@@ -238,7 +237,7 @@
       </div>
   
       <!-- Right Section -->
-      <div class="w-1/4 ">
+      <div class="w-1/4 fixed right-0 top-16 h-screen overflow-y-auto top-24 right-32">
         <!-- Right Section content goes here -->
   
        

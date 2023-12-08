@@ -1,18 +1,17 @@
 <!-- Home Component -->
-<body class="bg-gray-200">
-  <div class="mb-8">
+<div class="bg-gray-200">
+  <div class="">
     <!-- Navbar content goes here -->
     <app-navbar class="fixed top-0 w-full z-50 "></app-navbar>
   </div>
-<div class="container mx-auto  w-screen">
 
     <!-- Navbar (To be implemented as a separate component) -->
     
     <!-- Three Sections -->
-    <div class="flex space-x-8">
+    <div class="flex w-full bg-gray-200 flex-1 flex justify-center items-center ">
   
       <!-- Left Section -->
-      <div class="w-1/4 fixed left-30 top-24 h-screen overflow-y-auto" >
+      <div class=" w-1/4 mt-8  overflow-y-auto left-section hidden lg:block" >
         <!-- Left Section content goes here -->
         <!-- Upper Card with Profile Info -->
             <div class="bg-white p-4 rounded-md mb-4 text-center">
@@ -83,30 +82,30 @@
       </div>
   
       <!-- Middle Section -->
-      <div class="w-1/2 mx-auto overflow-y-auto top-24">
+      <div class=" w-1/2 lg:w-1/2  mt-7 overflow-y-auto  middle-section">
         <!-- Middle Section content -->
   
        <!-- Post Card for Posting -->
-        <div class="bg-white p-4 rounded-md mb-4">
+        <div class="bg-white p-4 rounded-md mb-4 post-card">
             <div class="flex items-center mb-4">
             <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2">
             <input type="text" placeholder="Share something..." class="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none">
             </div>
             <div class="flex items-center justify-between space-x-4">
             <div>
-                <i class=" ml-10 fas fa-image"></i>
-                <span>Image</span>
+                <i class=" ml-10 mr-2 fas fa-image"></i> 
+                <span >Image</span>
             </div>
             <div>
-                <i class="fas fa-video"></i>
+                <i class="  mr-2 fas fa-video"></i>
                 <span>Video</span>
             </div>
             <div>
-                <i class="fas fa-poll"></i>
+                <i class=" mr-2 fas fa-poll"></i>
                 <span>Poll</span>
             </div>
             <div>
-                <i class="fas fa-at"></i>
+                <i class=" mr-2 fas fa-at"></i>
                 <span>public</span>
             </div>
             <button class="bg-purple-500 text-white rounded-full  py-1 px-4">Post</button>
@@ -115,9 +114,9 @@
   
   
         <!-- Dropdown for Sorting Posts -->
-        <div class="mb-4 flex">
+        <div class="mb-4 flex  justify-end">
             <!-- Move select to the right using ml-auto -->
-            <select class="p-2 border rounded ml-auto">
+            <select class="p-2 border rounded ml-80 -mr-60">
               <option>Sort by Recent</option>
               <option>Sort by Older</option>
             </select>
@@ -233,11 +232,174 @@
           </div>
   
         <!-- Add more post cards here -->
+
+        <div class="bg-white p-4 rounded-md mb-4">
+          <!-- Profile Pic and User Info -->
+          <div class="flex items-center mb-2">
+            <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2">
+            <div>
+              <p class="font-bold">Eric Kyalo</p>
+              <p class="text-gray-500">12 minutes ago</p>
+            </div>
+          </div>
+  
+          <!-- Post Content -->
+            <div class="flex items-center space-x-4 mb-2">
+                <h2 class="text-xl font-bold">The Arsenal</h2>
+                <p class="text-blue-700">#epl</p>
+                <p class="text-blue-700">#gunners</p>
+                <p class="text-blue-700">#ucl</p>
+                <p class="text-blue-700">#wenger</p>
+            </div>
+            
+
+
+
+  
+          <!-- Image Post -->
+          <img src="/assets/images/profile-image.jpg" alt="Post Image" class="w-full h-58 rounded-md object-cover mb-2">
+  
+          <!-- Post Actions (Like, Comment, Save, Share) -->
+          <div class="flex items-center space-x-4">
+            <div>
+              <i class="fas fa-heart"></i>
+              <span>320k</span>
+            </div>
+            <div>
+              <i class="fas fa-comment"></i>
+              <span>300k</span>
+            </div>
+            <div>
+              <i class="fas fa-save"></i>
+              <span>Save</span>
+            </div>
+            <div class="flex-1"></div> <!-- Empty space to push the following content to the right -->
+            <div class="flex items-center group">
+            <i class="fas fa-paper-plane text-purple-500 cursor-pointer transition duration-300 transform group-hover:translate-x-2"></i>
+            <span class="opacity-0 group-hover:opacity-100 transition duration-300">Share</span>
+          </div>         
+        </div>           
+  
+          <!-- Comment Input Area -->
+          <div class="mt-2">
+            <input type="text" placeholder="Write your comment..." class="w-full p-2 border rounded focus:outline-none">
+          </div>
+        </div>
+
+
+
+        <div class="bg-white p-4 rounded-md mb-4">
+          <!-- Profile Pic and User Info -->
+          <div class="flex items-center mb-2">
+            <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2">
+            <div>
+              <p class="font-bold">Eric Kyalo</p>
+              <p class="text-gray-500">12 minutes ago</p>
+            </div>
+          </div>
+  
+          <!-- Post Content -->
+            <div class="flex items-center space-x-4 mb-2">
+                <h2 class="text-xl font-bold">The Arsenal</h2>
+                <p class="text-blue-700">#epl</p>
+                <p class="text-blue-700">#gunners</p>
+                <p class="text-blue-700">#ucl</p>
+                <p class="text-blue-700">#wenger</p>
+            </div>
+            
+
+
+
+  
+          <!-- Image Post -->
+          <img src="/assets/images/profile-image.jpg" alt="Post Image" class="w-full h-58 rounded-md object-cover mb-2">
+  
+          <!-- Post Actions (Like, Comment, Save, Share) -->
+          <div class="flex items-center space-x-4">
+            <div>
+              <i class="fas fa-heart"></i>
+              <span>320k</span>
+            </div>
+            <div>
+              <i class="fas fa-comment"></i>
+              <span>300k</span>
+            </div>
+            <div>
+              <i class="fas fa-save"></i>
+              <span>Save</span>
+            </div>
+            <div class="flex-1"></div> <!-- Empty space to push the following content to the right -->
+            <div class="flex items-center group">
+            <i class="fas fa-paper-plane text-purple-500 cursor-pointer transition duration-300 transform group-hover:translate-x-2"></i>
+            <span class="opacity-0 group-hover:opacity-100 transition duration-300">Share</span>
+          </div>         
+        </div>           
+  
+          <!-- Comment Input Area -->
+          <div class="mt-2">
+            <input type="text" placeholder="Write your comment..." class="w-full p-2 border rounded focus:outline-none">
+          </div>
+        </div>
+
+
+
+        <div class="bg-white p-4 rounded-md mb-4">
+          <!-- Profile Pic and User Info -->
+          <div class="flex items-center mb-2">
+            <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-8 h-8 rounded-full mr-2">
+            <div>
+              <p class="font-bold">Eric Kyalo</p>
+              <p class="text-gray-500">12 minutes ago</p>
+            </div>
+          </div>
+  
+          <!-- Post Content -->
+            <div class="flex items-center space-x-4 mb-2">
+                <h2 class="text-xl font-bold">The Arsenal</h2>
+                <p class="text-blue-700">#epl</p>
+                <p class="text-blue-700">#gunners</p>
+                <p class="text-blue-700">#ucl</p>
+                <p class="text-blue-700">#wenger</p>
+            </div>
+            
+
+
+
+  
+          <!-- Image Post -->
+          <img src="/assets/images/profile-image.jpg" alt="Post Image" class="w-full h-58 rounded-md object-cover mb-2">
+  
+          <!-- Post Actions (Like, Comment, Save, Share) -->
+          <div class="flex items-center space-x-4">
+            <div>
+              <i class="fas fa-heart"></i>
+              <span>320k</span>
+            </div>
+            <div>
+              <i class="fas fa-comment"></i>
+              <span>300k</span>
+            </div>
+            <div>
+              <i class="fas fa-save"></i>
+              <span>Save</span>
+            </div>
+            <div class="flex-1"></div> <!-- Empty space to push the following content to the right -->
+            <div class="flex items-center group">
+            <i class="fas fa-paper-plane text-purple-500 cursor-pointer transition duration-300 transform group-hover:translate-x-2"></i>
+            <span class="opacity-0 group-hover:opacity-100 transition duration-300">Share</span>
+          </div>         
+        </div>           
+  
+          <!-- Comment Input Area -->
+          <div class="mt-2">
+            <input type="text" placeholder="Write your comment..." class="w-full p-2 border rounded focus:outline-none">
+          </div>
+        </div>
   
       </div>
   
       <!-- Right Section -->
-      <div class="w-1/4 fixed right-0 top-16 h-screen overflow-y-auto top-24 right-32">
+      <div class="  w-1/4 mt-8 overflow-y-auto right-section hidden lg:block">
         <!-- Right Section content goes here -->
   
        
@@ -345,4 +507,3 @@
       </div>
     </div>
   </div>
-</body>

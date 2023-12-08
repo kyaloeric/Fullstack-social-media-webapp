@@ -1,0 +1,58 @@
+/* Add the following styles to your existing classes */
+
+/* Set the body to flex and full height */
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0px; /* Remove default margin */
+  }
+  
+  /* Set the container to flex and full height */
+  .container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* Set the middle section to flex-grow and add equal margins on both sides */
+  .middle-section {
+    /* flex-grow: 1; */
+    overflow-y: auto;
+    align-items: center;
+    display: flex;
+    width: 700px;
+    margin-top: 100px;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-left: 580px; */
+  }
+  
+  .post-card{
+    width: 700px;
+  }
+  /* Fix the left and right sections */
+  .left-section,
+  .right-section {
+    position: fixed;
+    top: 24px; /* Adjust the top position as needed */
+    height: calc(100vh - 48px); /* Adjust the height considering top and bottom margin */
+    overflow-y: auto;
+    margin-top: 80px;
+    margin: 160px;
+    width: 400px;
+
+  }
+  
+  /* Set the right section to be on the right side of the screen */
+  .right-section {
+    right: 0;
+    margin-top: 80px;
+    /* margin-right: 150px; */
+  }
+  
+  .left-section{
+    /* margin-left: 150px; */
+    left: 0;
+    margin-top: 80px;
+
+
+  }

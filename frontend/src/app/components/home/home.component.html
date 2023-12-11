@@ -39,8 +39,14 @@
                 </div>
 
                 <!-- My Profile Button -->
-                <button class="bg-purple-500 text-white w-full  rounded-full p-2">My Profile</button>
+                <!-- <button class="bg-purple-500 text-white w-full  rounded-full p-2">My Profile</button> -->
+                <button (click)="openMyProfilePopup()" class="bg-purple-500 text-white p-2 rounded-full w-full cursor-pointer">
+                  My Profile
+                </button>
             </div>
+
+            <app-my-profile-popup *ngIf="isMyProfilePopupOpen" [user]="currentUser" (editProfile)="openEditProfilePage()"></app-my-profile-popup>
+
 
 
          <!-- lower Card -->
@@ -92,13 +98,14 @@
             <input type="text" placeholder="Share something..." class="flex-1 border border-gray-300 rounded-md px-3 py-2 focus:outline-none">
             </div>
             <div class="flex items-center justify-between space-x-4">
+           
             <div>
-                <i class=" ml-10 mr-2 fas fa-image"></i> 
-                <span >Image</span>
+              <i class="ml-10 mr-2 fas fa-image cursor-pointer" (click)="openFileUpload('image')"></i>
+              <span>Image</span>
             </div>
             <div>
-                <i class="  mr-2 fas fa-video"></i>
-                <span>Video</span>
+              <i class="mr-2 fas fa-video cursor-pointer" (click)="openFileUpload('video')"></i>
+              <span>Video</span>
             </div>
             <div>
                 <i class=" mr-2 fas fa-poll"></i>
@@ -111,6 +118,13 @@
             <button class="bg-purple-500 text-white rounded-full  py-1 px-4">Post</button>
             </div>
         </div>
+
+        <!-- Hidden file input for image -->
+          <input type="file" id="imageUpload" style="display: none" accept="image/*" (change)="handleImageUpload($event)">
+
+          <!-- Hidden file input for video -->
+          <input type="file" id="videoUpload" style="display: none" accept="video/*" (change)="handleVideoUpload($event)">
+
   
   
         <!-- Dropdown for Sorting Posts -->

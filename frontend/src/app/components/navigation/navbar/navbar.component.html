@@ -12,7 +12,7 @@
   <!-- Navigation Icons - Centered -->
   <div class="flex items-center space-x-8 mx-auto sm:mx-0">
       <!-- Home Icon -->
-      <div class="group cursor-pointer flex items-center">
+      <div class="group cursor-pointer flex items-center" (click)="redirectToHome()">
           <i class="fas fa-home text-2xl"></i>
           <span class="hidden group-hover:inline-block ml-2 text-purple-500">Home</span>
       </div>
@@ -24,11 +24,11 @@
       </div>
 
       <!-- Messages Icon -->
-      <div class="group cursor-pointer flex items-center">
-          <i class="fas fa-envelope text-2xl"></i>
-          <span class="hidden group-hover:inline-block ml-2 text-purple-500">Messages</span>
+      <div class="group cursor-pointer flex items-center" (click)="redirectToMessages()">
+        <i class="fas fa-envelope text-2xl"></i>
+        <span class="hidden group-hover:inline-block ml-2 text-purple-500">Messages</span>
       </div>
-
+      
       <!-- Bookmarks Icon -->
       <div class="group cursor-pointer flex items-center">
           <i class="fas fa-bookmark text-2xl"></i>

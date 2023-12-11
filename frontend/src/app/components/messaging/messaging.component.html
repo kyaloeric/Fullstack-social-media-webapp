@@ -11,10 +11,29 @@
         <!-- Main Content -->
         <div class="flex mt-4 ">
             <!-- Left Section - Chat List -->
-            <div class="w-1/2  p-4 bg-gray-100 mt-4 mr-4 mb-4 rounded-md">
-                <h2 class="text-lg font-semibold mb-4">My Chat List</h2>
     
-                <!-- Sample Chat -->
+                <!-- <div class="mt-8 bg-white p-8 rounded-md flex items-center space-x-4 mb-2">
+                    <img src="/assets/images/profile-image.jpg" alt="User 1 Avatar" class="w-10 h-10 rounded-full">
+                    <div>
+                        <p class="font-semibold">Eric Kyalo</p>
+                        <p>How have you been?</p>
+                    </div>
+                </div> -->
+
+                <!-- messaging.component.html -->
+                <div class="w-1/2 p-4 bg-gray-100 mt-4 mr-4 mb-4 rounded-md">
+                    <h2 class="text-lg font-semibold mb-4">My Chat List</h2>
+                
+                    <div *ngFor="let chat of chatList" (click)="openChatDetails(chat)" class="mt-8 bg-white p-8 rounded-md flex items-center space-x-4 mb-2">
+                    <img [src]="chat.avatar" alt="User Avatar" class="w-10 h-10 rounded-full">
+                    <div>
+                        <p class="font-semibold">{{ chat.name }}</p>
+                        <p>{{ chat.lastMessage }}</p>
+                    </div>
+                    </div>
+                </div>
+                
+<!--     
                 <div class="mt-8 bg-white p-8 rounded-md flex items-center space-x-4 mb-2">
                     <img src="/assets/images/profile-image.jpg" alt="User 1 Avatar" class="w-10 h-10 rounded-full">
                     <div>
@@ -30,7 +49,6 @@
                         <p>How have you been?</p>
                     </div>
                 </div>
-    
                 <div class="mt-8 bg-white p-8 rounded-md flex items-center space-x-4 mb-2">
                     <img src="/assets/images/profile-image.jpg" alt="User 1 Avatar" class="w-10 h-10 rounded-full">
                     <div>
@@ -44,14 +62,7 @@
                         <p class="font-semibold">Eric Kyalo</p>
                         <p>How have you been?</p>
                     </div>
-                </div>
-                <div class="mt-8 bg-white p-8 rounded-md flex items-center space-x-4 mb-2">
-                    <img src="/assets/images/profile-image.jpg" alt="User 1 Avatar" class="w-10 h-10 rounded-full">
-                    <div>
-                        <p class="font-semibold">Eric Kyalo</p>
-                        <p>How have you been?</p>
-                    </div>
-                </div>
+                </div> -->
                
                
                 
@@ -60,119 +71,128 @@
                 <!-- Add more chats as needed -->
                 <!-- ... -->
     
-            </div>
     
             <!-- Middle Section - Messaging -->
     
                         <!-- Main container -->
-                        <div class="container  bg-white rounded-md  mt-4 mb-4">
-                            <!-- msg-header section starts -->
-                            <div class="msg-header ">
-                                <div class="container1 flex items-center">
-                                    <img src="/assets/images/profile-image.jpg" class="msgimg mt-2 ml-2" />
-                                    <div class="active">
-                                        <p>Eric Kyalo</p>
+
+
+                        <div *ngIf="openChat; else defaultChat">
+                            <!-- Chat details content -->
+                            <!-- ... existing chat details HTML ... -->
+                        </div>
+                        <ng-template #defaultChat>
+                            <!-- Default content when no chat is open -->
+                            <div class="container  bg-white rounded-md  mt-4 mb-4">
+                                <!-- msg-header section starts -->
+                                <div class="msg-header ">
+                                    <div class="container1 flex items-center">
+                                        <img src="/assets/images/profile-image.jpg" class="msgimg mt-2 ml-2" />
+                                        <div class="active">
+                                            <p>Eric Kyalo</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- msg-header section ends -->
-                        
-                            <!-- Chat inbox -->
-                            <div class="chat-page">
-                                <div class="msg-inbox ">
-                                    <div class="chats">
-                                        <!-- Message container -->
-                                        <div class="msg-page">
-                                            <!-- Incoming messages -->
-                        
-                                            <div class="received-chats">
-                                                <div class="received-chats-img">
-                                                    <img src="/assets/images/profile-image.jpg" />
-                                                </div>
-                                                <div class="received-msg">
-                                                    <div class="received-msg-inbox">
-                                                        <p>
-                                                            Hi !! This is a message from Riya. Lorem ipsum, dolor sit
-                                                            amet consectetur adipisicing elit. Non quas nemo eum,
-                                                            earum sunt, nobis similique quisquam eveniet pariatur
-                                                            commodi modi voluptatibus iusto omnis harum illum iste
-                                                            distinctio expedita illo!
-                                                        </p>
-                                                        <span class="time">18:06 PM | July 24</span>
+                                <!-- msg-header section ends -->
+                            
+                                <!-- Chat inbox -->
+                                <div class="chat-page">
+                                    <div class="msg-inbox ">
+                                        <div class="chats">
+                                            <!-- Message container -->
+                                            <div class="msg-page">
+                                                <!-- Incoming messages -->
+                            
+                                                <div class="received-chats">
+                                                    <div class="received-chats-img">
+                                                        <img src="/assets/images/profile-image.jpg" />
+                                                    </div>
+                                                    <div class="received-msg">
+                                                        <div class="received-msg-inbox">
+                                                            <p>
+                                                                Hi !! This is a message from Riya. Lorem ipsum, dolor sit
+                                                                amet consectetur adipisicing elit. Non quas nemo eum,
+                                                                earum sunt, nobis similique quisquam eveniet pariatur
+                                                                commodi modi voluptatibus iusto omnis harum illum iste
+                                                                distinctio expedita illo!
+                                                            </p>
+                                                            <span class="time">18:06 PM | July 24</span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                        
-                                            <!-- Outgoing messages -->
-                                            <div class="outgoing-chats">
-                                                <div class="outgoing-chats-img ml-1">
-                                                    <img src="/assets/images/profile-image.jpg" />
-                                                </div>
-                                                <div class="outgoing-msg">
-                                                    <div class="outgoing-chats-msg">
-                                                        <p class="multi-msg">
-                                                            Hi Riya, Lorem ipsum dolor sit amet consectetur
-                                                            adipisicing elit. Illo nobis deleniti earum magni
-                                                            recusandae assumenda.
-                                                        </p>
-                                                        <br />
-                                                        <p class="multi-msg">
-                                                            Lorem ipsum dolor sit amet consectetur.
-                                                        </p>
-                        
-                                                        <span class="time">18:30 PM | July 24</span>
+                            
+                                                <!-- Outgoing messages -->
+                                                <div class="outgoing-chats">
+                                                    <div class="outgoing-chats-img ml-1">
+                                                        <img src="/assets/images/profile-image.jpg" />
+                                                    </div>
+                                                    <div class="outgoing-msg">
+                                                        <div class="outgoing-chats-msg">
+                                                            <p class="multi-msg">
+                                                                Hi Riya, Lorem ipsum dolor sit amet consectetur
+                                                                adipisicing elit. Illo nobis deleniti earum magni
+                                                                recusandae assumenda.
+                                                            </p>
+                                                            <br />
+                                                            <p class="multi-msg">
+                                                                Lorem ipsum dolor sit amet consectetur.
+                                                            </p>
+                            
+                                                            <span class="time">18:30 PM | July 24</span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                        
-                                            <div class="received-chats">
-                                                <div class="received-chats-img mr-1">
-                                                    <img src="/assets/images/profile-image.jpg" />
-                                                </div>
-                                                <div class="received-msg">
-                                                    <div class="received-msg-inbox">
-                                                        <p class="single-msg">
-                                                            Hi!! This is a message from John Lewis. Lorem ipsum, dolor
-                                                            sit amet consectetur adipisicing elit. Iste distinctio
-                                                            expedita illo!
-                                                        </p>
-                                                        <span class="time">18:31 PM | July 24</span>
+                            
+                                                <div class="received-chats">
+                                                    <div class="received-chats-img mr-1">
+                                                        <img src="/assets/images/profile-image.jpg" />
+                                                    </div>
+                                                    <div class="received-msg">
+                                                        <div class="received-msg-inbox">
+                                                            <p class="single-msg">
+                                                                Hi!! This is a message from John Lewis. Lorem ipsum, dolor
+                                                                sit amet consectetur adipisicing elit. Iste distinctio
+                                                                expedita illo!
+                                                            </p>
+                                                            <span class="time">18:31 PM | July 24</span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                        
-                                            <div class="outgoing-chats">
-                                                <div class="outgoing-chats-img ml-1">
-                                                    <img src="/assets/images/profile-image.jpg" />
-                                                </div>
-                                                <div class="outgoing-msg">
-                                                    <div class="outgoing-chats-msg">
-                                                        <p>
-                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                                            Velit, sequi.
-                                                        </p>
-                        
-                                                        <span class="time">18:34 PM | July 24</span>
+                            
+                                                <div class="outgoing-chats">
+                                                    <div class="outgoing-chats-img ml-1">
+                                                        <img src="/assets/images/profile-image.jpg" />
+                                                    </div>
+                                                    <div class="outgoing-msg">
+                                                        <div class="outgoing-chats-msg">
+                                                            <p>
+                                                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                                Velit, sequi.
+                                                            </p>
+                            
+                                                            <span class="time">18:34 PM | July 24</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        
                             
-                            
-                            <!-- Message input area -->
-                            <div class="message-input-area mt-28 border border-gray-300 p-2 rounded-md relative">
-                                <div class="flex items-center ">
-                                    <textarea placeholder="Type your message..." class="w-full rounded-md p-2"></textarea>
-                                    <button class=" bg-blue-500 text-white px-4 py-2 rounded-md absolute right-2 bottom-2 lef-2 top-2 mt-2 ml-2 mb-2 mr-2">Send</button>
+                                
+                                
+                                <!-- Message input area -->
+                                <div class="message-input-area mt-28 border border-gray-300 p-2 rounded-md relative">
+                                    <div class="flex items-center ">
+                                        <textarea placeholder="Type your message..." class="w-full rounded-md p-2"></textarea>
+                                        <button class=" bg-blue-500 text-white px-4 py-2 rounded-md absolute right-2 bottom-2 lef-2 top-2 mt-2 ml-2 mb-2 mr-2">Send</button>
+                                    </div>
                                 </div>
+                                                            
                             </div>
-                                                        
-                        </div>
-    
+                        </ng-template>
+                        
+                        
     
                
             </div>

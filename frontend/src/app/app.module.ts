@@ -11,6 +11,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { HomeComponent } from './components/home/home.component';
 import { MessagingComponent } from './components/messaging/messaging.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { MyProfilePopupComponent } from './components/my-profile-popup/my-profile-popup.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
     ForgotPasswordComponent,
     HomeComponent,
     MessagingComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    MyProfilePopupComponent
   ],
   imports: [
     BrowserModule,

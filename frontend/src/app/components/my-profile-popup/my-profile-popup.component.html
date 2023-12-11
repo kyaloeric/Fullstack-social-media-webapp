@@ -1,0 +1,32 @@
+<!-- my-profile-popup.component.html -->
+<div class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75" *ngIf="closePopup">
+    <div class="bg-white p-24 rounded-md w-"> <!-- Increased width to w-120 -->
+      <!-- Centered Profile Image -->
+      <div class="flex items-center justify-center mb-4">
+        <img src="/assets/images/profile-image.jpg" alt="Profile Image" class="w-16 h-16 rounded-full">
+      </div>
+      <h2 class="text-2xl font-bold mb-4">My Profile</h2>
+      <!-- Display user details -->
+      <p class="mb-4"><strong>Name:</strong> {{ user.name }}</p>
+      <p class="mb-4"><strong>Email:</strong> {{ user.email }}</p>
+      <p class="mb-4"><strong>Contact Number:</strong> {{ user.contactNumber }}</p>
+      <p class="mb-4"><strong>Contact Number:</strong> {{ user.contactNumber }}</p>
+      <p class="mb-4"><strong>Address:</strong> {{ user.address }}</p>
+      <p class="mb-4"><strong>City:</strong> {{ user.city }}</p>
+      <p class="mb-4"><strong>Country:</strong> {{ user.country }}</p>
+      
+
+      <div class="flex justify-center justify-between">
+      <!-- Edit Profile Button -->
+      <button (click)="openEditProfile()" class="bg-blue-500 text-white p-2 rounded-md mt-4 cursor-pointer">
+        Edit Profile
+      </button>
+      
+      
+      <!-- Close Popup Button -->
+      <button (click)="onClosePopup()" class="bg-gray-500 text-white p-2 rounded-md mt-4 cursor-pointer">
+        Close
+      </button>
+    </div>
+    </div>
+  </div>

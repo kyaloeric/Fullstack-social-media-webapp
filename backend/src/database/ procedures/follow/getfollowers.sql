@@ -1,4 +1,4 @@
--- USE Talkyy
+-- USE Talky
 
 
 -- CREATE OR ALTER PROCEDURE getFollowers
@@ -11,4 +11,4 @@
 -- END
 
 
- SELECT *  FROM follower
+--  SELECT *  FROM follower

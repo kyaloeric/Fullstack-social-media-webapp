@@ -1,4 +1,4 @@
--- USE Talkyy
+-- USE Talky
 
 
 -- CREATE OR ALTER PROCEDURE [dbo].[getPostLikes]

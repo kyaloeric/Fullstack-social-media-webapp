@@ -1,13 +1,14 @@
 ##USER
 ####register user
+
 POST http://localhost:4600/user/register
 Content-Type: application/json
 
 {    
     
-   "fullName": "Eric Kyaloo",
+   "fullName": "Eric Kyalo",
     "user_name": "Erics",
-    "email":"kyalokioko98@gmail.com",
+    "email":"assignmenthelpe@gmail.com",
     "password": "3617@Kyalo!!"
 }
 
@@ -18,29 +19,30 @@ POST http://localhost:4600/user/login
 Content-Type: application/json
 
 {    
-    "email":"erickyalo19@gmail.com",
-    "password": "3617@Kyalo!"
+    "email":"assignmenthelpe@gmail.com",
+    "password": "3617@Kyalo!!"
 }
 
 #####get all users
 
 GET http://localhost:4600/user
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJFcmljIiwiZW1haWwiOiJlcmlja3lhbG8xOUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiOTZkNjNiZjAtZWY4Zi00YmYwLWI4YTctNTg1NWU2NDQzYWM5IiwiaXNBZG1pbiI6dHJ1ZSwiZnVsbE5hbWUiOiJFcmljIEt5YWxvIiwiaWF0IjoxNzAyODgyNjAxLCJleHAiOjE3MDI5NjkwMDF9.kOspeAp_JXYAd0kKPmZMOiRFAj1lbad_MnB9nTx_Isg
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJFcmljcyIsImVtYWlsIjoia3lhbG9raW9rbzk4QGdtYWlsLmNvbSIsInVzZXJfaWQiOiIyZGJhMWY3My0xYTEyLTQxODAtOThjZS0wOTA0N2FkNzdiODgiLCJpc0FkbWluIjpmYWxzZSwiZnVsbE5hbWUiOiJFcmljIEt5YWxvIiwiaWF0IjoxNzAzMDEyNjI2LCJleHAiOjE3MDMwOTkwMjZ9.cEQRv00SWgEih8XYmJRFhOLB_f-vYO2F6pT7qyTqZ5k
 
 #####get one user by id
-GET http://localhost:4600/user/96d63bf0-ef8f-4bf0-b8a7-5855e6443ac9
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJFcmljIiwiZW1haWwiOiJlcmlja3lhbG8xOUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiOTZkNjNiZjAtZWY4Zi00YmYwLWI4YTctNTg1NWU2NDQzYWM5IiwiaXNBZG1pbiI6dHJ1ZSwiZnVsbE5hbWUiOiJFcmljIEt5YWxvIiwiaWF0IjoxNzAyODgyNjAxLCJleHAiOjE3MDI5NjkwMDF9.kOspeAp_JXYAd0kKPmZMOiRFAj1lbad_MnB9nTx_Isg
+GET http://localhost:4600/user/2dba1f73-1a12-4180-98ce-09047ad77b88
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJFcmljcyIsImVtYWlsIjoiYXNzaWdubWVudGhlbHBlQGdtYWlsLmNvbSIsInVzZXJfaWQiOiJmM2Q0ZmRjYS1mYTQ5LTRmYjQtYTdkZC1iNDRmZjRkOGU0ZmEiLCJpc0FkbWluIjpmYWxzZSwiZnVsbE5hbWUiOiJFcmljIEt5YWxvIiwiaWF0IjoxNzAzMDgyNzc2LCJleHAiOjE3MDMxNjkxNzZ9.Vs4Le5bVh8-IycwpvhjOnla66TrJEBJxYh-mmNY9Cfw
+#####update user
 
 #####update user
 
-PUT http://localhost:4600/user
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJFcmljIiwiZW1haWwiOiJlcmlja3lhbG8xOUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiOTZkNjNiZjAtZWY4Zi00YmYwLWI4YTctNTg1NWU2NDQzYWM5IiwiaXNBZG1pbiI6dHJ1ZSwiZnVsbE5hbWUiOiJFcmljIEt5YWxvIiwiaWF0IjoxNzAyODgyNjAxLCJleHAiOjE3MDI5NjkwMDF9.kOspeAp_JXYAd0kKPmZMOiRFAj1lbad_MnB9nTx_Isg
-Content-Type: application/json
+put http://localhost:4600/user/
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJFcmljcyIsImVtYWlsIjoia3lhbG9raW9rbzk4QGdtYWlsLmNvbSIsInVzZXJfaWQiOiIyZGJhMWY3My0xYTEyLTQxODAtOThjZS0wOTA0N2FkNzdiODgiLCJpc0FkbWluIjpmYWxzZSwiZnVsbE5hbWUiOiJFcmljIEt5YWxvIiwiaWF0IjoxNzAzMDEyNjI2LCJleHAiOjE3MDMwOTkwMjZ9.cEQRv00SWgEih8XYmJRFhOLB_f-vYO2F6pT7qyTqZ5k
 
 {
-    
-    "user_name": "Eric Maoko",
-    "email":"erickyalo19@gmail.com"
+    "user_id":"f3d4fdca-fa49-4fb4-a7dd-b44ff4d8e4fa",
+    "user_name": "Eric",
+    "email":"ericmain@gmail.com"
+
 }
 
 
@@ -77,15 +79,13 @@ Content-Type: application/json
 
 ###POSTS
 ## create new post
-
-POST http://localhost:4600/post/addnew
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJFcmljIiwiZW1haWwiOiJlcmlja3lhbG8xOUBnbWFpbC5jb20iLCJ1c2VyX2lkIjoiOTZkNjNiZjAtZWY4Zi00YmYwLWI4YTctNTg1NWU2NDQzYWM5IiwiaXNBZG1pbiI6dHJ1ZSwiZnVsbE5hbWUiOiJFcmljIEt5YWxvIiwiaWF0IjoxNzAyNjQwNDAzLCJleHAiOjE3MDI3MjY4MDN9.IhdT15iFOhZlz87ffNOWnkl38wdUBs3pZEsq17-RxAo
+POST http://localhost:4600/post/addnew/
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJFcmljcyIsImVtYWlsIjoia3lhbG9raW9rbzk4QGdtYWlsLmNvbSIsInVzZXJfaWQiOiIyZGJhMWY3My0xYTEyLTQxODAtOThjZS0wOTA0N2FkNzdiODgiLCJpc0FkbWluIjpmYWxzZSwiZnVsbE5hbWUiOiJFcmljIEt5YWxvIiwiaWF0IjoxNzAzMDEyNjI2LCJleHAiOjE3MDMwOTkwMjZ9.cEQRv00SWgEih8XYmJRFhOLB_f-vYO2F6pT7qyTqZ5k
 Content-Type: application/json
 
 {
-    "created_by_user_id":"96d63bf0-ef8f-4bf0-b8a7-5855e6443ac9",
-    "caption":"You can now post ne content",    
-    "created_at":"Yesterday"
+    "created_by_user_id":"2dba1f73-1a12-4180-98ce-09047ad77b88",
+    "caption":"You can now post ne content"   
 }
 
 

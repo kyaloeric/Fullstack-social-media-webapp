@@ -1,6 +1,6 @@
 
 
--- USE Talkyy
+-- USE Talky
 -- CREATE TABLE follower (
 --     follower_id VARCHAR(500) PRIMARY KEY,
 --     following_user_id VARCHAR(100) NOT NULL,

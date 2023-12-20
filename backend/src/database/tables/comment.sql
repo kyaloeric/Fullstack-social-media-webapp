@@ -1,4 +1,4 @@
--- USE Talkyy
+-- USE Talky
 
 
 
@@ -16,5 +16,6 @@
 
 -- );
 
+-- DROP TABLE comment
 
 -- select * from comment

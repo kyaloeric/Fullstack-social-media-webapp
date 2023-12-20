@@ -1,5 +1,5 @@
 
--- USE Talkyy
+-- USE Talky
 
 
 -- CREATE OR ALTER  PROCEDURE [dbo].[resetPassword]

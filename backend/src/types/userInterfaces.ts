@@ -16,3 +16,60 @@ export interface checkDetailsUser {
   profileImage: string;
   fullName: string;
 }
+
+export interface updatUser {
+  user_id: string;
+  user_name: string;
+  email: string;
+  profileImage: string;
+  fullName: string;
+}
+export interface user extends updatUser {
+  password: string;
+}
+
+export interface UpdateUser {
+  user_id: string;
+  user_name: string;
+
+  profileImage: string;
+  fullName: string;
+}
+
+export interface checkDetailsUser {
+  user_id: string;
+  user_name: string;
+  email: string;
+  profileImage: string;
+  fullName: string;
+}
+
+
+
+
+export interface updatUser {
+  user_id: string;
+  user_name: string;
+  email: string;
+  profileImage: string;
+  fullName: string;
+}
+export interface user extends updatUser {
+  password: string;
+}
+
+export interface UpdateUser {
+  user_id: string;
+  user_name: string;
+
+  profileImage: string;
+  fullName: string;
+}
+
+export interface checkDetailsUser {
+  user_id: string;
+  user_name: string;
+  email: string;
+  profileImage: string;
+  fullName: string;
+}

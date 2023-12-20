@@ -5,9 +5,11 @@ import { isEmpty } from "lodash";
 import { createPostSchema } from "../validators/postValidator";
 import { Post } from "../types/postInterface";
 
+
 export const createPost = async (req: Request, res: Response) => {
   try {
     console.log(req.body);
+    const { user_id } = req.params; // Access user_id from the authenticated user
 
     let { postImage, created_by_user_id, caption, created_at } = req.body;
 
@@ -24,7 +26,6 @@ export const createPost = async (req: Request, res: Response) => {
       created_by_user_id,
       caption,
       postImage,
-      created_at,
     });
 
     if (result.rowsAffected[0] === 0) {
@@ -51,7 +52,6 @@ export const createPost = async (req: Request, res: Response) => {
               post_user_tag_id,
               post_id,
               user_id,
-              created_at,
             });
 
             if (result.rowsAffected[0] === 0) {

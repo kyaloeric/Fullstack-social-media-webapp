@@ -1,4 +1,4 @@
--- USE Talkyy
+-- USE Talky
 
 
 -- CREATE OR ALTER PROCEDURE [dbo].[getUserByEmail]
@@ -11,6 +11,9 @@
 -- 	select	* 
 -- 	FROM	users  WHERE email = @email AND isDeleted = 0;
 -- end;
+
+
+
 
 -- EXEC getUserByEmail @email = 'erickyalo19@gmail.com';
 

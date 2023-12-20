@@ -5,7 +5,7 @@ import { createPost, deletePost, editPost, getPost, getPostLikes, getPosts, togg
 
 const post_router = Router();
 
-post_router.post("/addnew",verifyToken, createPost);
+post_router.post("/addnew/",verifyToken, createPost);
 post_router.put("/edit",verifyToken, editPost);
 post_router.delete("/:post_id", verifyToken, deletePost);
 post_router.get('/getall', verifyToken, getPosts)

@@ -1,13 +1,13 @@
 import { Request, Response } from "express";
 import { execute, query } from "../services/dbconnect";
 import { v4 as uuidv4 } from "uuid";
-import { updatUser, user } from "../types/userInterfaces";
+import { UpdateUser, user } from "../types/userInterfaces";
 import { generateToken } from "../services/tokenGenerator";
 import {
   validateLoginUser,
   validateRegisterUser,
   validateResetpassword,
-  validateUpdateuser,
+  validateUpdateUser,
   validateUserEmail,
   validateuserId,
 } from "../validators/userValidator";
@@ -144,27 +144,36 @@ export const loginUser = async (req: Request, res: Response) => {
 
 export const updateUser = async (req: Request, res: Response) => {
   try {
-    const { user_id, user_name, email, profileImage, fullName } = req.body;
+    let { user_id, user_name, profileImage, fullName } = req.body;
 
-    const { error } = validateUpdateuser.validate(req.body);
+    console.log(profileImage);
+
+    // if (profileImage === "") {
+    //   profileImage =
+    //     "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=1434&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+    // }
+
+    const { error } = validateUpdateUser.validate(req.body);
+    console.log(error);
+
     if (error)
       return res
         .status(400)
-        .send({ error: "Wrong credentials " });
+        .send({ error: "check input infomation if its correct" });
 
-    const newUser: updatUser = {
+    const newUser: UpdateUser = {
       user_id,
       user_name,
-      email,
       profileImage,
       fullName,
     };
 
     const procedureName = "updateUser";
     const params = newUser;
+    // console.log(params);
 
     await execute(procedureName, params);
-    return res.send({ message: "User details updated successfully" });
+    return res.send({ message: "User updated successfully" });
   } catch (error) {
     console.log(error);
     res.status(500).send({

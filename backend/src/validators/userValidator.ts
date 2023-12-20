@@ -24,12 +24,13 @@ export const validateRegisterUser = Joi.object().keys({
 export const validateUserEmail = Joi.object().keys({
   email: Joi.string().email().required(),
 });
-
-export const validateUpdateuser = Joi.object().keys({
+export const validateUpdateUser = Joi.object().keys({
   user_name: Joi.string().required(),
-  email: Joi.string().email().required(),
+  fullName: Joi.string().required(),
+  profileImage: Joi.allow('').allow(null),
   user_id: Joi.string().min(8).required(),
 });
+
 
 export const validateResetpassword = Joi.object().keys({
   user_id: Joi.string().min(8).required(),

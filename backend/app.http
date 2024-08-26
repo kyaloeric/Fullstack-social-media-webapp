@@ -6,10 +6,10 @@ Content-Type: application/json
 
 {    
     
-   "fullName": "Eric Kyalo",
+   "fullName": "BK",
     "user_name": "Erics",
-    "email":"assignmenthelpe@gmail.com",
-    "password": "3617@Kyalo!!"
+    "email":"ahelpe@gmail.com",
+    "password": "3!!"
 }
 
 
@@ -20,7 +20,7 @@ Content-Type: application/json
 
 {    
     "email":"assignmenthelpe@gmail.com",
-    "password": "3617@Kyalo!!"
+    "password": "17@alo!!"
 }
 
 #####get all users
@@ -40,8 +40,8 @@ token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJFcmljcyIsImVtYWls
 
 {
     "user_id":"f3d4fdca-fa49-4fb4-a7dd-b44ff4d8e4fa",
-    "user_name": "Eric",
-    "email":"ericmain@gmail.com"
+    "user_name": "ricc",
+    "email":"ricmain@gmail.com"
 
 }
 
@@ -59,7 +59,7 @@ POST http://localhost:4600/user/forgot
 Content-Type: application/json
 
 {
-    "email":"erickyalo19@gmail.com"
+    "email":"kilomain@gmail.com"
 }
 
 ##### reset password
@@ -68,7 +68,7 @@ Content-Type: application/json
 
 {
     "user_id" : "466782fb-fea3-4d1a-9980-9c150105962e",
-    "password" : "3617@kioko"
+    "password" : "3617@loko"
 }
 
 
